@@ -54,28 +54,23 @@ A aplicação estará disponível em http://localhost:8080.
 
 ## Estrutura do Projeto
 
-      ```plantuml
-         @startuml  
-         pacto-recrutamento-backend/
-         ├── src/
-         │   ├── main/
-         │   │   ├── java/
-         │   │   │   ├── pacto/recrutamento/
-         │   │   │   │   ├── model/          # Modelos de Entidade
-         │   │   │   │   ├── repository/     # Repositórios JPA
-         │   │   │   │   ├── service/        # Serviços
-         │   │   │   │   ├── controller/     # Controladores REST
-         │   │   │   │   ├── security/       # Configurações e filtros de segurança
-         │   │   │   │   ├── config/         # Configurações
-         │   │   └── resources/
-         │   │       ├── application.properties  # Configurações da aplicação
-         ├── pom.xml                          # Dependências do Maven
-         └── README.md                        # Documentação do projeto 
-         @enduml
+      pacto-recrutamento-backend/
+      ├── src/
+      │   ├── main/
+      │   │   ├── java/
+      │   │   │   ├── pacto/recrutamento/
+      │   │   │   │   ├── model/          # Modelos de Entidade
+      │   │   │   │   ├── repository/     # Repositórios JPA
+      │   │   │   │   ├── service/        # Serviços
+      │   │   │   │   ├── controller/     # Controladores REST
+      │   │   │   │   ├── security/       # Configurações e filtros de segurança
+      │   │   │   │   ├── config/         # Configurações
+      │   │   └── resources/
+      │   │       ├── application.properties  # Configurações da aplicação
+      ├── pom.xml                          # Dependências do Maven
+      └── README.md                        # Documentação do projeto 
 
-
-
-   ## Endpoints Principais
+## Endpoints Principais
    
    POST /auth/register: Cadastro de novos usuários.
    POST /auth/login: Autenticação de usuários e geração de token JWT.
