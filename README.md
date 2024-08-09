@@ -1,7 +1,9 @@
 # Documentação Geral da API
 **Nome do Projeto:** Pacto Recrutamento API
- **Descrição:** API para o sistema de recrutamento interno, permitindo a gestão de usuários, vagas, candidaturas, autenticação e autorização.
- **Autenticação:** A API utiliza autenticação JWT (JSON Web Token). Para acessar a maioria dos endpoints, é necessário incluir um token JWT válido no cabeçalho Authorization das requisições.
+
+**Descrição:** API para o sistema de recrutamento interno, permitindo a gestão de usuários, vagas, candidaturas, autenticação e autorização.
+
+**Autenticação:** A API utiliza autenticação JWT (JSON Web Token). Para acessar a maioria dos endpoints, é necessário incluir um token JWT válido no cabeçalho Authorization das requisições.
 
 ## Sumário
 
@@ -72,11 +74,11 @@ A aplicação estará disponível em http://localhost:8080.
 
 ## Endpoints Principais
    
-   POST /auth/register: Cadastro de novos usuários.
-   POST /auth/login: Autenticação de usuários e geração de token JWT.
-   GET /vagas: Listagem de todas as vagas disponíveis.
-   POST /vagas: Criação de uma nova vaga (apenas para ADMIN).
-   GET /candidaturas/vaga/{vagaId}: Listagem de candidaturas para uma vaga específica.
+- POST /auth/register: Cadastro de novos usuários.
+- POST /auth/login: Autenticação de usuários e geração de token JWT.
+- GET /vagas: Listagem de todas as vagas disponíveis.
+- POST /vagas: Criação de uma nova vaga (apenas para ADMIN).
+- GET /candidaturas/vaga/{vagaId}: Listagem de candidaturas para uma vaga específica.
 
 
 
