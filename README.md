@@ -7,6 +7,7 @@
 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Instalação e Configuração](#instalação-e-configuração)
+- [Estrutura do Projeto](#estrutura-do-projeto)
 
 ## Tecnologias Utilizadas
 
@@ -31,7 +32,52 @@
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/pacto-recrutamento-backend.git
-   cd pacto-recrutamento-backend
-  bash```
+   git clone https://github.com/lucaspk91/recrutamento.git
+   cd recrutamento
+2. Configure o banco de dados no arquivo 'application.properties':
+   
+   ```bash
+   spring.datasource.url=jdbc:postgresql://localhost:5432/pacto_recrutamento
+   spring.datasource.username=seu-usuario
+   spring.datasource.password=sua-senha
+   spring.jpa.hibernate.ddl-auto=update
+3. Compile o projeto:
+
+   ```bash
+   mvn clean install
+4. Execute a aplicação:
+
+   ```bash
+   mvn spring-boot:run
+
+A aplicação estará disponível em http://localhost:8080.
+
+## Estrutura do Projeto
+
+pacto-recrutamento-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── pacto/recrutamento/
+│   │   │   │   ├── model/          # Modelos de Entidade
+│   │   │   │   ├── repository/     # Repositórios JPA
+│   │   │   │   ├── service/        # Serviços
+│   │   │   │   ├── controller/     # Controladores REST
+│   │   │   │   ├── security/       # Configurações e filtros de segurança
+│   │   │   │   ├── config/         # Configurações
+│   │   └── resources/
+│   │       ├── application.properties  # Configurações da aplicação
+├── pom.xml                          # Dependências do Maven
+└── README.md                        # Documentação do projeto
+
+   ## Endpoints Principais
+   
+   POST /auth/register: Cadastro de novos usuários.
+   POST /auth/login: Autenticação de usuários e geração de token JWT.
+   GET /vagas: Listagem de todas as vagas disponíveis.
+   POST /vagas: Criação de uma nova vaga (apenas para ADMIN).
+   GET /candidaturas/vaga/{vagaId}: Listagem de candidaturas para uma vaga específica.
+
+
+
 
